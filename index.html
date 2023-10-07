@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Animal Searcher API</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Choose an Animal: </h3>
+        <select id="b" onchange="request1()">
+            <option value="lion">Lion</option>
+            <option value="hippopotamus">Hippopotamus</option>
+            <option value="fox">Fox</option>
+            <option value="giraffe">Giraffe</option>
+        </select>
+        <div class="table-container">
+            <table id="table">
+                <tr>
+                    <th>Location</th>
+                    <th>Name</th>
+                    <th>Family</th>
+                    <th>Speed</th>
+                    <th>Weight</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
