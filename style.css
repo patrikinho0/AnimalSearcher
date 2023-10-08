@@ -6,17 +6,26 @@ body, html {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
     font-size: 120%;
-    background: transparent;
 }
 
 .container {
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: url('files/background-video.mp4') no-repeat center center fixed;
-    background-size: cover;
+}
+
+#filmik {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 #b {
