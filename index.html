@@ -8,16 +8,22 @@
     <title>Animal Searcher API</title>
 </head>
 <body>
-    <div class="container">
-        <video src="files/background-video.mp4" muted autoplay loop id="filmik"></video>
-        <h3>Choose an Animal: </h3>
+
+    <div id="container">
+        <div id="header">
+            <h1>Animal Searcher</h1>
+        </div>
+        <h3 id="underline-hover">Choose an Animal: </h3>
         <select id="b" onchange="request1()">
             <option value="lion">Lion</option>
             <option value="hippopotamus">Hippopotamus</option>
             <option value="fox">Fox</option>
             <option value="giraffe">Giraffe</option>
+            <option value="elephant">Elephant</option>
+            <option value="tiger">Tiger</option>
+            <option value="zebra">Zebra</option>
         </select>
-        <div class="table-container">
+        <div id="table-container">
             <table id="table">
                 <tr>
                     <th>Location</th>
@@ -28,6 +34,7 @@
                 </tr>
             </table>
         </div>
+        <video src="files/background-video.mp4" muted autoplay loop id="filmik"></video>
     </div>
 </body>
 </html>

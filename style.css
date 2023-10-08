@@ -8,7 +8,7 @@ body, html {
     font-size: 120%;
 }
 
-.container {
+#container {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -32,14 +32,15 @@ body, html {
     padding: 10px;
     font-size: 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.7);
 }
 
-.table-container {
+#table-container {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 20px;
+    margin: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     overflow-x: auto;
@@ -57,11 +58,87 @@ body, html {
 }
 
 @media (max-width: 768px) {
-    .container {
+    #container {
         padding: 20px;
     }
 
-    .table-container {
+    #table-container {
         width: 100%;
     }
+}
+
+#underline-hover {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+
+#underline-hover::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+#underline-hover:hover::before {
+    width: 100%;
+}
+
+#underline-hover:not(:hover)::before {
+    width: 0;
+}
+
+@keyframes shadow-grow-shrink {
+    0% {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+#table {
+    animation: shadow-grow-shrink 2s infinite;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
 }
